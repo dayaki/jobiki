@@ -1,6 +1,6 @@
 @import "./variables.scss";
 @import "~bulma/bulma.sass";
-@import url("https://fonts.googleapis.com/css?family=Dosis:400,600|Open+Sans:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,600|Open+Sans:400,700|Basic&display=swap");
 
 body {
   background: #f6fafd;
@@ -67,9 +67,10 @@ body {
   //   background: #f8d57b;
   border-radius: 8px;
   display: inline-block;
-  //   width: 292p;
   width: 270px;
   height: 324px;
+  // width: 250px;
+  // height: 300px;
   padding: 1rem;
   .timeago {
     justify-content: flex-end;
@@ -129,9 +130,14 @@ body {
   }
 }
 
+/* 
+  MidSection
+*/
+
 // Job
 .job-nav {
   justify-content: space-between;
+  align-items: center;
   p {
     color: #7e8190;
     font-size: 0.8rem;
@@ -200,6 +206,28 @@ body {
     background: #f6fafd;
     font-family: "Open Sans", sans-serif;
     // opacity: 0.8;
+  }
+}
+.pagination {
+  margin-top: 0.7rem;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  color: #000;
+  .pagination-link,
+  .pagination-ellipsis {
+    border: none;
+    border-radius: 0px;
+    margin: 0px;
+    margin-right: 0.2rem;
+    padding: 0.7rem;
+    background: #fff;
+    &:hover {
+      background: desaturate($primary, 30%);
+    }
+  }
+  .is-current {
+    background: #949cff;
+    border: #949cff;
   }
 }
 
@@ -275,5 +303,155 @@ body {
   .quotes.right {
     right: 0rem;
     top: 4rem;
+  }
+}
+
+/*
+  Footer
+*/
+.footer {
+  background: #161e29;
+  padding-bottom: 3rem;
+  margin-top: 5rem;
+  .columns + .columns {
+    padding-top: 2rem;
+  }
+  .is-half {
+    background: $primary;
+    padding: 1.5rem 2rem;
+    justify-content: space-between;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 9.1rem;
+    .txt {
+      h5 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+      p {
+        color: #5d6aca;
+        font-family: "Dosis", sans-serif;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        font-weight: 600;
+        opacity: 0.8;
+      }
+    }
+    .button {
+      font-family: "Dosis", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 1rem 2rem;
+      margin-top: 0.5rem;
+    }
+  }
+  p.is-marginless {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.7rem;
+    color: #fff;
+    opacity: 0.6;
+    margin-top: 0.9rem;
+  }
+  .social {
+    margin-top: 0.6rem;
+    a {
+      margin-right: 0.58rem;
+      border-radius: 3rem;
+      width: 18px;
+      height: 18px;
+      justify-content: center;
+      display: inline-flex;
+      align-items: center;
+      &:nth-child(1) {
+        background: #f8dee7;
+      }
+      &:nth-child(2) {
+        background: #ffde85;
+      }
+      &:nth-child(3) {
+        background: #97a6ff;
+      }
+      &:nth-child(4) {
+        background: #b1e7d9;
+      }
+    }
+  }
+  nav {
+    text-align: right;
+    li {
+      list-style: none;
+      a {
+        color: #fff;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.7rem;
+      }
+    }
+    p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 0.65rem;
+      color: #fff;
+      opacity: 0.6;
+      margin-top: 0.7rem;
+    }
+  }
+}
+
+/*  
+
+  404 Page
+
+*/
+.notfound {
+  justify-content: flex-start;
+  .left {
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    background-color: #becfdf;
+  }
+  .right {
+    display: flex;
+    flex: 3;
+    background-color: #f1f6fc;
+  }
+  .wrapper {
+    position: absolute;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0px 1px 1px rgba(200, 200, 200, 0.4);
+    width: 70%;
+    height: 70vh;
+    top: 9rem;
+    // left: 4rem;
+    left: 16%;
+    border-radius: 0.8rem;
+    padding: 0.5rem 5rem;
+    align-items: center;
+    h1 {
+      font-family: "Basic", sans-serif;
+      padding-top: 3rem;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 0.8rem;
+      opacity: 0.7;
+      margin-top: 1rem;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      margin-top: 7rem;
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        font-family: "Dosis", sans-serif;
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+      &:hover {
+        color: desaturate($primary, 30%);
+      }
+    }
   }
 }

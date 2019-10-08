@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => (
               <FlashCard color={["#b6ecde", "#a9e3d4"]} />
               <FlashCard color={["#96a5ff", "#8b9af9"]} />
             </div>
-            <div className="flashcard-wrapper">
+            <div className="flashcard-wrapper is-hidden-mobile">
               <FlashCard color={["#ffde85", "#f8d57b"]} />
               <FlashCard color={["#f6dfe7", "#f0d6df"]} />
             </div>
