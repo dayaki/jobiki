@@ -1,139 +1,65 @@
-import React from 'react';
-import {
-	FaSass,
-	FaHtml5,
-	FaReact,
-	FaMobileAlt,
-	FaRocket,
-	FaOsi
-} from 'react-icons/fa';
+import React from "react";
 
-import './style.scss';
-import Emoji from './emoji';
+import "./style.scss";
+import Job from "./job";
+import Quote from "./quote";
 
 const Midsection = () => (
-	<div>
-		<section className="section">
-			<div className="container">
-				<div className="columns is-multiline">
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaSass size="fa-2x" color="#d22780" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">Uses Bulma</h1>
-									<p className="subtitle is-size-5">
-										Bulma is an open source CSS framework and used by more than
-										100,000 developers.
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaHtml5 size="fa-2x" className="has-text-danger" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">JAMStack Solution</h1>
-									<p className="subtitle is-size-5">
-										It’s a new way of building websites and apps that delivers
-										better performance, higher security, lower cost of scaling,
-										and a better developer experience.
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaReact size="fa-2x" color="#5e227f" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">Gatsby + React?</h1>
-									<p className="subtitle is-size-5">
-										Uses Gatsby's version <code>v2</code>, enjoy the power of
-										the latest web technologies. All set up and waiting for you
-										to start building.
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaMobileAlt size="fa-2x" color="blue" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">Responsive Design</h1>
-									<p className="subtitle is-size-5">
-										Bulma is based on the Flexbox model and built with Sass. The
-										simplest grid system Just add columns, they will resize
-										themselves, like this website.
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaOsi size="fa-2x" className="has-text-primary" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">Open Source</h1>
-									<p className="subtitle is-size-5">
-										This starter kit is MIT Licensed. Need I say more?
-										<Emoji emoji="🤑" />
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-					<div className="column is-one-third">
-						<article className="media">
-							<figure className="media-left">
-								<span className="icon is-medium">
-									<FaRocket size="fa-2x" className="has-text-danger" />
-								</span>
-							</figure>
-							<div className="media-content">
-								<div className="content">
-									<h1 className="title is-size-4">Starter Kit</h1>
-									<p className="subtitle is-size-5">
-										This starter kit is target to developers who are looking
-										forward to use Bulma along with GatsbyJS. You can read more
-										in the <a href="https://gatsbyjs.org">documentation</a> on
-										how to get started.
-									</p>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
+  <React.Fragment>
+    <section className="section is-paddingless">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-two-thirds is-offset-2">
+            <div className="job-nav is-flex">
+              <p>We found 25 junior jobs available for you</p>
+              <div>
+                <p className="is-inline-block">Sort by: </p>{" "}
+                <div class="select is-dark is-small">
+                  <select>
+                    <option>Date of publication</option>
+                    <option>With options</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <Job />
+            <Job />
+            <Job />
+            <Job />
+            <Job />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="section lower-footer">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-one-third">
+            <h4 className="title is-5">
+              What the users said <br /> about us
+            </h4>
+            <p className="subtitle is-7">
+              Finding junior developer jobs is hard, we'r dedicated to junior
+              developers looking for jobs. Our goal is to match your skills and
+              desired career path with employers who are looking for the same.
+            </p>
+          </div>
+          <div className="column is-relative" style={{ paddingLeft: "2rem" }}>
+            <div className="columns">
+              <div className="column">
+                <Quote name="James Abinibi" company="Fresh LTD" testimony="I just want you to know that you guys did a very good job, i find my
+          dream job here." image="https://randomuser.me/api/portraits/men/9.jpg" />
+              </div>
+              <div className="column">
+                <Quote name="Folake Aderibigbe" company="Freelancer" testimony="Wow, I just applied for my first dev job and it was so SIMPLE 🙌🏻" image="https://randomuser.me/api/portraits/men/12.jpg" position="right" />
+              </div>
+            </div>
+            <Quote name="Uche Jombo" company="Freelancer" testimony="You made it so simple to find junior developer jobs, thank you. 😎" image="https://randomuser.me/api/portraits/men/4.jpg" postion="bottom" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </React.Fragment>
 );
 
 export default Midsection;

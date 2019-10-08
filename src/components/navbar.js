@@ -1,41 +1,42 @@
-import React from 'react';
-import { FaGithub } from 'react-icons/fa';
+import React from "react";
 
-import './style.scss';
-import gatsbyLogo from '../images/gatsby-icon.png';
-import bulmaLogo from '../images/bulma-logo.png';
+import "./style.scss";
+import logo from "../images/logo.png";
 
 const Navbar = () => (
-	<div className="hero-head is-hidden-mobile">
-		<nav className="navbar">
-			<div className="container">
-				<div className="navbar-brand">
-					<a
-						className="navbar-item"
-						href="https://github.com/amandeepmittal/gatsby-bulma-quickstart"
-					>
-						<img src={gatsbyLogo} alt="Logo-1" />
-						<img src={bulmaLogo} alt="Logo-2" />
-					</a>
-				</div>
-				<div id="navbarMenuHeroA" className="navbar-menu">
-					<div className="navbar-end">
-						<span className="navbar-item">
-							<a
-								className="button is-danger is-inverted"
-								href="https://github.com/amandeepmittal/gatsby-bulma-quickstart"
-							>
-								<span className="icon">
-									<FaGithub size="fa-2x" />
-								</span>
-								<span>Download</span>
-							</a>
-						</span>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
+  <div className="hero-head is-hidden-mobile">
+    <nav className="navbar">
+      <div className="container">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="/">
+            <img src={logo} alt="Logo-1" />
+          </a>
+        </div>
+        <div className="navbar-menu">
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <a className="has-text-black-ter" href="/">
+                For employers
+              </a>
+            </div>
+            <div className="navbar-item">
+              <a className="has-text-black-ter" href="/">
+                Our clients
+              </a>
+            </div>
+            <div className="navbar-item">
+              <a className="has-text-black-ter" href="/">
+                Blog
+              </a>
+            </div>
+            <a href="/" className="button is-primary navbar-item">
+              Post a job
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 );
 
 export default Navbar;
